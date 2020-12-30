@@ -2,15 +2,13 @@ const axios = require('axios');
 
 const {
   GraphQLObjectType,
-  GraphQLInt,
   GraphQLString,
-  GraphQLBoolean,
   GraphQLList,
   GraphQLSchema
 } = require('graphql');
 
 
-// 
+// Category Type
 const CategoryType = new GraphQLObjectType({
   name: 'Categories',
   description: `This represents a list of categories`,
@@ -25,6 +23,7 @@ const JokeType = new GraphQLObjectType({
   name: 'Joke',
   description: `This represents a random Chuck Norris joke`,
   fields: {
+    categories: {type: new GraphQLList(GraphQLString)},
     value: { type: GraphQLString },
     id: { type: GraphQLString }
   }
