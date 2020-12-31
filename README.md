@@ -21,17 +21,6 @@ cd frontend && npm install
 # On Front/Client only (:3000)
 npm start  
 
-cd backend && npm install
-
-# Server only (:5000)
-npm run devStart
-
-or
-
-node server
-
-
-
 # Build for production (Builds into server ./public)
 cd frontend && npm run build
 
